@@ -37,10 +37,11 @@ public class SecurityConfig {
                         .requestMatchers(new AntPathRequestMatcher("/v3/api-docs/**")).permitAll()
                         .requestMatchers(new AntPathRequestMatcher("/swagger-resources/**")).permitAll()
                         .requestMatchers(new AntPathRequestMatcher("/webjars/**")).permitAll()
-                        // Add static files - YEH ADD KARO
+                        // Add static files
                         .requestMatchers(new AntPathRequestMatcher("/")).permitAll()
                         .requestMatchers(new AntPathRequestMatcher("/index.html")).permitAll()
                         .requestMatchers(new AntPathRequestMatcher("/dashboard.html")).permitAll()
+                        .requestMatchers(new AntPathRequestMatcher("/role-dashboard.html")).permitAll()  // ← YEH ADD KIYA
                         .requestMatchers(new AntPathRequestMatcher("/static/**")).permitAll()
                         .requestMatchers(new AntPathRequestMatcher("/*.html")).permitAll()
                         .requestMatchers(new AntPathRequestMatcher("/*.css")).permitAll()
